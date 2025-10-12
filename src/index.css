@@ -1,0 +1,659 @@
+/* Fonts */
+:root {
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Quicksand", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root {
+  --background-color: #05071e; /* Background color for the entire website, including individual sections */
+  --default-color: #e8e7f7; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #524dd3; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #131428; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #c8c6e3; /* The default color of the main navmenu links */
+  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #03051f; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #1f2240; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #c8c6e3; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+.light-background {
+  --background-color: #0c114a;
+  --surface-color: #131b76;
+}
+
+.dark-background {
+  --background-color: #01020e;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #252525;
+  --contrast-color: #ffffff;
+}
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+body,
+html {
+  height: 100%;
+}
+
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+  margin: 0;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+/* Header CSS Starts */
+
+#header {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  --background-color: rgba(255, 255, 255, 0);
+  --surface-color: #1b1933;
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 20px 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+#header  .header-container {
+  background: var(--surface-color);
+  border-radius: 50px;
+  padding: 5px 25px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#header .logo {
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0;
+  font-weight: 500;
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  padding: 0;
+}
+
+#header .navbar-nav .nav-link {
+  color: var(--nav-color);
+  font-size: 15px;
+  font-family: var(--nav-font);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  transition: 0.3s;
+  position: relative;
+}
+
+#header .navbar-nav .nav-link:hover,
+#header .navbar-nav .nav-link:focus,
+#header .navbar-nav .nav-link.active,
+#header .navbar-nav .nav-link.active:focus {
+  color: var(--nav-hover-color);
+}
+
+#header .nav-btn,
+#header .nav-btn:focus {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 14px;
+  padding: 8px 20px;
+  margin: 0 0 0 30px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+#header .nav-btn:hover,
+#header .nav-btn:focus:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+.nav-links {}
+
+#header .navbar-nav .nav-link:first-child {
+    order: 1;
+}
+.nav-links {}
+
+#header .navbar-nav .nav-link:nth-child(2) {
+    order: 2;
+}
+#header .navbar-nav .nav-link:nth-child(3) {
+    order: 3;
+}
+#header .navbar-nav .nav-link:nth-child(4) {
+    order: 4;
+}
+#header .navbar-nav .nav-link:nth-child(5) {
+    order: 5;
+}
+#header .navbar-nav .dropdown {
+    order: 6
+}
+#header .navbar-nav .nav-link:nth-child(6) {
+    order: 7;
+}
+
+@media (min-width: 992px) {
+  #header .navbar-nav .nav-link {
+    white-space: nowrap;
+    padding: 15px 14px;
+  }
+  #header .navbar-nav .nav-link:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: 10px;
+    left: 12px;
+    background-color: var(--accent-color);
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  #header .navbar-nav .nav-link:hover:before,
+  #header .navbar-nav .nav-link.active:before,
+  #header .navbar-nav .nav-link:focus:before {
+    visibility: visible;
+    width: calc(100% - 24px);
+  }
+}
+
+@media (max-width: 991px) {
+ 
+  #header .navbar-toggler-icon {
+    width: 1.3em;
+    height: 1.3em;
+    filter: invert(1);
+  }
+  #header .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  #header .header-container {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px 5px 10px 15px;
+  }
+  div#basic-navbar-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1b1933;
+    width: 100%;
+    border-radius: 25px;
+  }
+  #header .navbar-nav .nav-link {
+    padding: 8px 20px;
+  }
+
+  #header .logo {
+    order: 1;
+  }
+  #header .nav-btn {
+    order: 2;
+    margin-right: 10px;
+    padding: 6px 15px;
+  }
+  #header .link-wrap {
+    order: 3;
+  }
+}
+
+/* Header CSS  Ends*/
+
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+section,
+.section {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 60px 0;
+  scroll-margin-top: 90px;
+  overflow: clip;
+}
+
+@media (max-width: 1199px) {
+
+  section,
+  .section {
+    scroll-margin-top: 66px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/* Banner CSS Starts*/
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    var(--background-color) 0%,
+    color-mix(in srgb, var(--accent-color), transparent 95%) 100%
+  );
+  padding: 120px 0;
+}
+
+.hero .hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero .hero-text {
+  font-size: 1.2rem;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero .hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.hero .hero-buttons .btn {
+  padding: 15px 30px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.hero .hero-buttons .btn.btn-outline {
+  background: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.hero .hero-buttons .btn.btn-primary {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border: 2px solid var(--accent-color);
+}
+
+.hero .hero-buttons .btn.btn-outline:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  transform: translateY(-2px);
+}
+
+.hero .hero-buttons .btn.btn-primary:hover {
+  background: color-mix(in srgb, var(--accent-color), black 10%);
+  border-color: color-mix(in srgb, var(--accent-color), black 10%);
+  transform: translateY(-2px);
+}
+
+.hero .hero-stats {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero .hero-stats .stat-item {
+  text-align: center;
+}
+
+.hero .hero-stats .stat-item .stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  line-height: 1;
+}
+
+.hero .hero-stats .stat-item .stat-label {
+  display: block;
+  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero .hero-stats {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
+.hero .hero-visual {
+  position: relative;
+}
+
+.hero .hero-visual .hero-image {
+  position: relative;
+  z-index: 2;
+}
+
+.hero .hero-visual .hero-image img {
+  border-radius: 20px;
+}
+
+.hero .hero-bg-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero .hero-bg-elements .bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent-color), transparent 90%),
+    color-mix(in srgb, var(--accent-color), transparent 95%)
+  );
+}
+
+.hero .hero-bg-elements .bg-shape.shape-1 {
+  width: 300px;
+  height: 300px;
+  top: -150px;
+  right: -150px;
+  animation: rotate 20s linear infinite;
+}
+
+.hero .hero-bg-elements .bg-shape.shape-2 {
+  width: 200px;
+  height: 200px;
+  bottom: -100px;
+  left: -100px;
+  animation: rotate 15s linear infinite reverse;
+}
+
+.hero .hero-bg-elements .bg-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--accent-color), transparent 85%) 1px,
+    transparent 1px
+  );
+  background-size: 50px 50px;
+  animation: moveParticles 30s linear infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveParticles {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+@media (max-width: 991px) {
+  .hero .hero-content {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .hero .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero .hero-stats .stat-item .stat-number {
+    font-size: 1.5rem;
+  }
+}
+
+/* Banner CSS Ends*/
+
+
+/* About CSS Starts */
+
+.about .content .subtitle {
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.about .content h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about .content p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin-bottom: 2rem;
+}
+
+.about .content .features-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2.5rem;
+}
+
+.about .content .features-list li {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+  font-weight: 500;
+}
+
+.about .content .features-list li i {
+  font-size: 1.25rem;
+  color: var(--accent-color);
+  margin-right: 0.75rem;
+}
+
+.about .content .btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 0.75rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.about .content .btn-primary:hover {
+  background-color: color-mix(in srgb, var(--accent-color), black 10%);
+  border-color: color-mix(in srgb, var(--accent-color), black 10%);
+  transform: translateY(-2px);
+}
+
+.about .image-composition {
+  position: relative;
+  padding: 2rem;
+}
+
+@media (max-width: 991px) {
+  .about .image-composition {
+    padding: 1rem;
+  }
+}
+
+.about .image-composition .image-main {
+  position: relative;
+  z-index: 2;
+}
+
+.about .image-composition .image-main img {
+  border-radius: 8px;
+  box-shadow: 0 15px 40px color-mix(in srgb, var(--default-color), transparent 85%);
+  border: 5px solid color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.about .image-composition .image-secondary {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 45%;
+  z-index: 3;
+}
+
+.about .image-composition .image-secondary img {
+  border-radius: 8px;
+  border: 5px solid color-mix(in srgb, var(--default-color), transparent 70%);
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.about .image-composition .stats-card {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  background: var(--surface-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 90%);
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 767px) {
+  .about .image-composition .stats-card {
+    padding: 1rem;
+    gap: 1rem;
+    flex-direction: column;
+  }
+}
+
+.about .image-composition .stats-card .stats-item {
+  text-align: center;
+}
+
+.about .image-composition .stats-card .stats-item h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin: 0;
+  line-height: 1;
+}
+
+@media (max-width: 1199px) {
+  .about .image-composition .stats-card .stats-item h3 {
+    font-size: 2rem;
+  }
+}
+
+.about .image-composition .stats-card .stats-item p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.about .image-composition::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+  border-radius: 12px;
+  z-index: 1;
+}
+
+
+/* About CSS Ends*/
