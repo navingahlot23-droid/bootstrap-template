@@ -72,7 +72,6 @@ const WebHeader = () => {
                         <NavDropdown.Item key={index} href={e.dropdownHref}>{e.dropdownLink}</NavDropdown.Item>
                     ))
                 }
-                
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
