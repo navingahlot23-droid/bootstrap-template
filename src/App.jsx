@@ -5,6 +5,7 @@ import Hero from './Components/Hero';
 import About from './Components/About';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Service from "./Components/Services";
 
 function App() {
   useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
       <WebHeader />
       <Hero/>
       <About/>
+      <Service />
     </>
   )
 }
