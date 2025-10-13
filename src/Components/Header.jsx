@@ -18,7 +18,7 @@ const WebHeader = () => {
     },
     {
       linkName: "Services",
-      hrefVal: "#service",
+      hrefVal: "#services",
     },
     {
      linkName: "Portfolio",
