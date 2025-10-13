@@ -154,13 +154,9 @@ h6 {
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
-.nav-links {
-}
 
 #header .navbar-nav .nav-link:first-child {
   order: 1;
-}
-.nav-links {
 }
 
 #header .navbar-nav .nav-link:nth-child(2) {
