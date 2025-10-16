@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-const WebHeader = () => {
+const Header = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   
   const navLink = [
@@ -84,4 +84,4 @@ const WebHeader = () => {
   );
 };
 
-export default WebHeader;
+export default Header;
