@@ -15,13 +15,13 @@ function App() {
       duration: 1000, // animation duration in ms
       once: true, // whether animation should happen only once
     });
+
     const lightbox = GLightbox({
       selector: ".glightbox", // CSS selector for links
       touchNavigation: true,
       loop: true,
       zoomable: true,
     });
-  
     return () => {
       lightbox.destroy(); // cleanup on unmount
     };

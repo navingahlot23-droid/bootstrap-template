@@ -1,4 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
+import Icons from "../Global/icons";
 
 const Service = () => {
     const serviceBox = [
@@ -66,7 +67,7 @@ const Service = () => {
                                 <Col data-aos="fade-up" data-aos-delay={100 * (index + 1)} key={index}>
                                     <div className="service-card">
                                         <div className="service-icon">
-                                            <i className={`bi bi-${e.icon}`}></i>
+                                            <Icons iconName = {e.icon}/>
                                         </div>
                                         <h4><a href={e.link}>{e.title}</a></h4>
                                         <p>{e.text}</p>
