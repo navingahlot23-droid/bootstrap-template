@@ -1,17 +1,10 @@
 import { Container, Row, Col } from "react-bootstrap";
 import imgSRC from "../assets/banner.jpg";
 import React, { useEffect } from "react";
-import PureCounter from "@srexi/purecounterjs/dist/purecounter_vanilla.js";
 
 
 const Hero = () => {
-    useEffect(() => {
-        // Delay initialization slightly to ensure DOM is ready
-        setTimeout(() => {
-          new PureCounter();
-        }, 100); // 100ms delay
-      }, []);
-
+   
     return (
         <>
             <section id="hero" className="hero section">
