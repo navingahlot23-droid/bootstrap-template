@@ -1,5 +1,12 @@
 import React, { useEffect } from "react";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import GLightbox from "glightbox";
+import "glightbox/dist/css/glightbox.min.css";
+import PureCounter from "@srexi/purecounterjs/dist/purecounter_vanilla.js";
+import 'swiper/css';
+
 import Hero from './Components/Hero';
 import About from './Components/About';
 import Service from "./Components/Services";
@@ -7,13 +14,9 @@ import Header from "./Components/Header";
 import Portfolio from "./Components/Portfolio";
 import WhyUs from "./Components/WhyUs";
 import Testimonials from "./Components/Testimonials";
-
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import GLightbox from "glightbox";
-import "glightbox/dist/css/glightbox.min.css";
-import PureCounter from "@srexi/purecounterjs/dist/purecounter_vanilla.js";
-import 'swiper/css';
+import Teams from "./Components/Teams";
+import Contact from "./Components/Contact";
+import Footer from "./Components/Footer";
 
 function App() {
   useEffect(() => {
@@ -48,6 +51,9 @@ function App() {
       <Portfolio />
       <WhyUs />
       <Testimonials/>
+      <Teams/>
+      <Contact/>
+      <Footer/>
     </>
   )
 }

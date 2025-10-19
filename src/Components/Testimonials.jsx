@@ -12,42 +12,47 @@ import imgSRC5 from "../assets/person-5.webp";
 const Testimonials = () => {
     const testimonials = [
         {
+            id: 1,
             img: `${imgSRC1}`,
             name: 'Christopher Lee',
             role: 'VP Engineering',
-            rating: 'star-fill',
+            rating: 2,
             quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.',
             companyName: 'DevStream'
         },
         {
+            id: 2,
             img: `${imgSRC2}`,
             name: 'Amanda Rodriguez',
             role: 'UX Researcher',
-            rating: 'star-fill',
+            rating: 4,
             quote: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse.',
             companyName: 'UserFirst'
         },
         {
+            id: 3,
             img: `${imgSRC3}`,
             name: 'Alexander Chen',
             role: 'Frontend Engineer',
-            rating: 'star-fill',
+            rating: 5,
             quote: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.',
             companyName: 'InnovateLab'
         },
         {
+            id: 4,
             img: `${imgSRC4}`,
             name: 'Jennifer Martinez',
             role: 'Product Designer',
-            rating: 'star-fill',
+            rating: 3,
             quote: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit.',
             companyName: 'TechCorp'
         },
         {
+            id: 5,
             img: `${imgSRC5}`,
             name: 'Rachel Taylor',
             role: 'Marketing Lead',
-            rating: 'star-fill',
+            rating: 3,
             quote: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident.',
             companyName: 'GrowthCo'
         }
@@ -62,29 +67,29 @@ const Testimonials = () => {
                         <h2>Testimonials</h2>
                         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
                     </div>
-                    <Swiper 
-                    modules={[Pagination, Autoplay]} 
-                    autoplay={{ delay: 4000 }} 
-                    spaceBetween={20} 
-                    slidesPerView={1} 
-                    pagination={{ clickable: true }} 
-                    loop={true}
-                    speed={600} 
-                    centeredSlides={true}
-                    breakpoints={{
-                        768: {
-                            slidesPerView: 1.5,
-                            spaceBetween: 30,
-                        },
-                        1200: {
-                            slidesPerView: 3,
-                            spaceBetween: 40,
-                        },
-                    }}>
+                    <Swiper
+                        modules={[Pagination, Autoplay]}
+                        autoplay={{ delay: 4000 }}
+                        spaceBetween={20}
+                        slidesPerView={1}
+                        pagination={{ clickable: true }}
+                        loop={true}
+                        speed={600}
+                        centeredSlides={true}
+                        breakpoints={{
+                            768: {
+                                slidesPerView: 1.5,
+                                spaceBetween: 30,
+                            },
+                            1200: {
+                                slidesPerView: 3,
+                                spaceBetween: 40,
+                            },
+                        }}>
                         {
                             testimonials.map(e => (
-                                <SwiperSlide>
-                                    <div className="testimonial-card aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+                                <SwiperSlide key={e.id}>
+                                    <div className="testimonial-card" data-aos="zoom-in" data-aos-delay="100">
                                         <div className="testimonial-header">
                                             <div className="user-avatar">
                                                 <img src={e.img} />
@@ -93,7 +98,9 @@ const Testimonials = () => {
                                                 <h3>{e.name}</h3>
                                                 <span className="user-role">{e.role}</span>
                                                 <div className="rating">
-                                                    <Icons iconName={e.rating} />
+                                                    {[...Array(e.rating)].map((_, index) => (
+                                                        <Icons key={index} iconName="star-fill" />
+                                                    ))}
                                                 </div>
                                             </div>
                                         </div>
