@@ -1,14 +1,27 @@
 import { Col, Container, Row } from "react-bootstrap";
+import Stats from "../Global/Stats";
+import SectionTitle from "../Global/SectionTitle";
 
 const Contact = () => {
+    const statArray = [
+        {
+            number: 24,
+            label: 'Hours Average Response'
+        },
+        {
+            number: 98,
+            label: '% Client Satisfaction'
+        },
+        {
+            number: 150,
+            label: '+ Projects Delivered'
+        }
+    ];
     return (
         <>
             <section id="contact" className="contact section">
                 <Container>
-                    <div className="section-title" data-aos="fade-up">
-                        <h2>Contact</h2>
-                        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-                    </div>
+                <SectionTitle heading='Contact' subText='Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit' dataAos="fade-up" />
                     <Row className="align-items-center" data-aos="fade-up" data-aos-delay="100">
                         <Col lg="5" xs='12' data-aos="fade-right" data-aos-delay="200">
                             <div className="contact-form-card">
@@ -94,19 +107,12 @@ const Contact = () => {
                                 </div>
 
                                 <div className="additional-info" data-aos="fade-up" data-aos-delay="400">
-                                    <div className="info-stats">
-                                        <div className="stat-item">
-                                            <div className="stat-number">24h</div>
-                                            <div className="stat-label">Average Response</div>
-                                        </div>
-                                        <div className="stat-item">
-                                            <div className="stat-number">98%</div>
-                                            <div className="stat-label">Client Satisfaction</div>
-                                        </div>
-                                        <div className="stat-item">
-                                            <div className="stat-number">150+</div>
-                                            <div className="stat-label">Projects Delivered</div>
-                                        </div>
+                                    <div className="info-stats stats-card">
+                                        {
+                                            statArray.map((e, index) => (
+                                                <Stats key={index} number={e.number} label={e.label} />
+                                            ))
+                                        }
                                     </div>
 
                                     <div className="social-connect">

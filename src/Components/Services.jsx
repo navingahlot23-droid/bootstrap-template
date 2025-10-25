@@ -1,5 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Icons from "../Global/icons";
+import SectionTitle from "../Global/SectionTitle";
 
 const Service = () => {
     const serviceBox = [
@@ -57,10 +58,7 @@ const Service = () => {
         <>
             <section id="services" className="services section">
                 <Container>
-                    <div className="section-title" data-aos="fade-up">
-                        <h2>Services</h2>
-                        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-                    </div>
+                    <SectionTitle heading='Services'  subText='Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit'  dataAos="fade-up"/>
                     <Row lg={3} md={2} xs={1} className="gy-4">
                         {
                             serviceBox.map((e, index) => (

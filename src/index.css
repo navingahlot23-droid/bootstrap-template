@@ -351,17 +351,17 @@ section,
   transform: translateY(-2px);
 }
 
-.hero .hero-stats {
+.stats-card {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
 }
 
-.hero .hero-stats .stat-item {
+.stats-card .stat-item {
   text-align: center;
 }
 
-.hero .hero-stats .stat-item .stat-number {
+.stats-card .stat-item .stat-number {
   display: block;
   font-size: 2rem;
   font-weight: 700;
@@ -369,15 +369,15 @@ section,
   line-height: 1;
 }
 
-.hero .hero-stats .stat-item .stat-label {
+.stats-card .stat-item .stat-label {
   display: block;
   font-size: 0.9rem;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin-top: 0.5rem;
 }
 
-@media (max-width: 768px) {
-  .hero .hero-stats {
+@media (max-width: 991px) {
+  .stats-card {
     justify-content: center;
     gap: 1.5rem;
   }
@@ -491,7 +491,7 @@ section,
     justify-content: center;
   }
 
-  .hero .hero-stats .stat-item .stat-number {
+  .stats-card .stat-item .stat-number {
     font-size: 1.5rem;
   }
 }
@@ -602,42 +602,6 @@ section,
   border-radius: 8px;
   box-shadow: 0 10px 30px
     color-mix(in srgb, var(--default-color), transparent 90%);
-  display: flex;
-  gap: 2rem;
-}
-
-@media (max-width: 767px) {
-  .about .image-composition .stats-card {
-    padding: 1rem;
-    gap: 1rem;
-    flex-direction: column;
-  }
-}
-
-.about .image-composition .stats-card .stats-item {
-  text-align: center;
-}
-
-.about .image-composition .stats-card .stats-item h3 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--accent-color);
-  margin: 0;
-  line-height: 1;
-}
-
-@media (max-width: 1199px) {
-  .about .image-composition .stats-card .stats-item h3 {
-    font-size: 2rem;
-  }
-}
-
-.about .image-composition .stats-card .stats-item p {
-  margin: 0;
-  font-size: 0.8rem;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  font-weight: 500;
-  margin-top: 0.5rem;
 }
 
 .about .image-composition::before {
@@ -653,22 +617,15 @@ section,
   z-index: 1;
 }
 
+@media (max-width: 767px) {
+  .about .image-composition .stats-card {
+      padding: 1rem;
+      gap: 1rem;
+      flex-direction: column;
+  }
+}
+
 /* About CSS Ends*/
-
-/*Service CSS Starts*/
-#services .section-title h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-#services .section-title p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  line-height: 1.6;
-  margin-bottom: 25px;
-  font-size: 15px;
-  margin-top: 0;
-}
 
 
 /* Services CSS Starts*/
@@ -1218,21 +1175,9 @@ section,
 .why-us .feature-card .feature-stats {
   padding-top: 20px;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  justify-content: center;
 }
 
-.why-us .feature-card .feature-stats .stat-number {
-  display: block;
-  font-size: 32px;
-  font-weight: 800;
-  color: var(--accent-color);
-  line-height: 1;
-}
-
-.why-us .feature-card .feature-stats .stat-label {
-  font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  font-weight: 500;
-}
 
 .why-us .feature-showcase {
   text-align: center;
@@ -1365,10 +1310,6 @@ section,
 
   .why-us .feature-card h4 {
     font-size: 20px;
-  }
-
-  .why-us .feature-card .feature-stats .stat-number {
-    font-size: 28px;
   }
 
   .why-us .feature-content h3 {
@@ -1632,33 +1573,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 15%);
 }
 
-.team .team-intro .intro-content .stats-row {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-}
 
-.team .team-intro .intro-content .stats-row .stat-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.team .team-intro .intro-content .stats-row .stat-item .stat-number {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--accent-color);
-  line-height: 1;
-  margin-bottom: 4px;
-}
-
-.team .team-intro .intro-content .stats-row .stat-item .stat-label {
-  font-size: 0.9rem;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
 
 .team .team-grid {
   display: grid;
@@ -2281,30 +2196,12 @@ section,
 }
 
 .contact .contact-info-area .additional-info .info-stats {
-  display: flex;
-  gap: 30px;
   padding: 30px;
   background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 96%), color-mix(in srgb, var(--accent-color), transparent 92%));
   border-radius: 20px;
   margin-bottom: 30px;
 }
 
-.contact .contact-info-area .additional-info .info-stats .stat-item {
-  text-align: center;
-}
-
-.contact .contact-info-area .additional-info .info-stats .stat-item .stat-number {
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--accent-color);
-  margin-bottom: 4px;
-}
-
-.contact .contact-info-area .additional-info .info-stats .stat-item .stat-label {
-  font-size: 13px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  font-weight: 500;
-}
 
 .contact .contact-info-area .additional-info .social-connect {
   text-align: center;

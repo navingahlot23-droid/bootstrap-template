@@ -8,6 +8,7 @@ import imgSRC2 from "../assets/person-2.webp";
 import imgSRC3 from "../assets/person-3.webp";
 import imgSRC4 from "../assets/person-4.webp";
 import imgSRC5 from "../assets/person-5.webp";
+import SectionTitle from "../Global/SectionTitle";
 
 const Testimonials = () => {
     const testimonials = [
@@ -63,10 +64,7 @@ const Testimonials = () => {
         <>
             <section id="testimonials" className="testimonials section">
                 <Container>
-                    <div className="section-title" data-aos="fade-up">
-                        <h2>Testimonials</h2>
-                        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-                    </div>
+                <SectionTitle heading='Testimonials' subText='Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit' dataAos="fade-up" />
                     <Swiper
                         modules={[Pagination, Autoplay]}
                         autoplay={{ delay: 4000 }}

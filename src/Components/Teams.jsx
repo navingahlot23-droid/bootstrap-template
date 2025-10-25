@@ -7,21 +7,23 @@ import imgSRC1 from "../assets/person-m-6.webp";
 import imgSRC2 from "../assets/person-m-4.webp";
 import imgSRC3 from "../assets/person-f-8.webp";
 import imgSRC4 from "../assets/person-f-3.webp";
+import Stats from "../Global/Stats";
+import SectionTitle from "../Global/SectionTitle";
 
 
 const Teams = () => {
-    const stats = [
+    const statArray = [
         {
-            statNumber: '50+',
-            statLabel: 'Team Members'
+            number: 50,
+            label: '+ Team Members'
         },
         {
-            statNumber: 8,
-            statLabel: 'Departments'
+            number: 8,
+            label: 'Departments'
         },
         {
-            statNumber: '15+',
-            statLabel: 'Countries'
+            number: 15,
+            label: '+ Countries'
         }
     ];
 
@@ -122,10 +124,7 @@ const Teams = () => {
         <>
             <section id="team" className="team section">
                 <Container>
-                    <div className="section-title" data-aos="fade-up">
-                        <h2>Team</h2>
-                        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-                    </div>
+                <SectionTitle heading='Team' subText='Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit' dataAos="fade-up" />
                     <div data-aos="fade-up" data-aos-delay="100">
                         <Row className="g-4" lg={2} xs={1}>
                             <Col>
@@ -133,13 +132,10 @@ const Teams = () => {
                                     <div className="intro-content">
                                         <h3>Meet Our Exceptional Team</h3>
                                         <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
-                                        <div className="stats-row">
+                                        <div className="stats-card">
                                             {
-                                                stats.map((e, index) => (
-                                                    <div className="stat-item" key={index}>
-                                                        <span className="stat-number">{e.statNumber}</span>
-                                                        <span className="stat-label">{e.statLabel}</span>
-                                                    </div>
+                                                statArray.map((e, index) => (
+                                                    <Stats key={index} number={e.number} label={e.label} />
                                                 ))
                                             }
                                         </div>
@@ -220,7 +216,7 @@ const Teams = () => {
                                                                         twitter: e.twitter,
                                                                         github: e.github,
                                                                         instagram: e.instagram
-                                                                    }).filter(social => social.name && social.url).map((social, index) => (<a href={social.url} className="contact-btn">
+                                                                    }).filter(social => social.name && social.url).map((social, index) => (<a key={index} href={social.url} className="contact-btn">
                                                                         <Icons iconName={social.name} />
                                                                     </a>))
                                                                 }
@@ -236,7 +232,7 @@ const Teams = () => {
                             </Col>
                         </Row>
                         <Row className="mt-4">
-                            <Col lg = {{span : 8, offset : 2}}>
+                            <Col lg={{ span: 8, offset: 2 }}>
                                 <div className="join-team-cta aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
                                     <div className="cta-icon">
                                         <i className="bi bi-rocket-takeoff"></i>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import images from "../utils/importImages";
+import SectionTitle from "../Global/SectionTitle";
 
 
 const Portfolio = () => {
@@ -39,10 +40,7 @@ const Portfolio = () => {
         <>
             <section id="portfolio" className="portfolio section">
                 <Container>
-                    <div className="section-title" data-aos="fade-up">
-                        <h2>Portfolio</h2>
-                        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-                    </div>
+                    <SectionTitle heading='Portfolio' subText='Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit' dataAos="fade-up" />
                     <div className="wrapper" data-aos="fade-up" data-aos-delay="100">
 
                         <ul className="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
@@ -80,8 +78,8 @@ const Portfolio = () => {
                                             <h3>{e.title}</h3>
                                             <p>{e.description}</p>
                                             <div className="portfolio-tech">
-                                                {e.badge.map(e => (
-                                                    <span className="tech-badge">{e}</span>
+                                                {e.badge.map((e,index) => (
+                                                    <span className="tech-badge" key={index}>{e}</span>
                                                 ))}
                                             </div>
                                         </div>

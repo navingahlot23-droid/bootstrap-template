@@ -1,8 +1,19 @@
 import { Col, Container, Row } from "react-bootstrap"
 import imgSRC1 from "../assets/about-1.jpg";
 import imgSRC2 from "../assets/about-2.jpg";
+import Stats from "../Global/Stats";
 
 const About = () => {
+    const statArray = [
+        {
+            number: 20,
+            label: '+ Years of Expertise'
+        },
+        {
+            number: 500,
+            label: '+ Happy Clients'
+        }
+    ];
     return (
         <>
             <section id="about" className="about section">
@@ -28,20 +39,17 @@ const About = () => {
                         <Col lg={6} data-aos="fade-left" data-aos-delay="300">
                             <div className="image-composition">
                                 <div className="image-main">
-                                    <img src={imgSRC1} alt="Modern office with a team working" className="img-fluid" loading="lazy"/>
+                                    <img src={imgSRC1} alt="Modern office with a team working" className="img-fluid" loading="lazy" />
                                 </div>
                                 <div className="image-secondary">
-                                    <img src={imgSRC2} alt="Collaborative discussion" className="img-fluid" loading="lazy"/>
+                                    <img src={imgSRC2} alt="Collaborative discussion" className="img-fluid" loading="lazy" />
                                 </div>
                                 <div className="stats-card">
-                                    <div className="stats-item">
-                                        <h3>20+</h3>
-                                        <p>Years of Expertise</p>
-                                    </div>
-                                    <div className="stats-item">
-                                        <h3>500+</h3>
-                                        <p>Happy Clients</p>
-                                    </div>
+                                    {
+                                        statArray.map((e, index) => (
+                                            <Stats key={index} number={e.number} label={e.label} />
+                                        ))
+                                    }
                                 </div>
                             </div>
                         </Col>

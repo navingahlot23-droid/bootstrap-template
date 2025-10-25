@@ -1,6 +1,8 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Icons from "../Global/icons";
 import imgSRC from "../assets/why-us.png";
+import Stats from "../Global/Stats";
+import SectionTitle from "../Global/SectionTitle";
 
 const WhyUs = () => {
     const whyBox = [
@@ -49,30 +51,26 @@ const WhyUs = () => {
         <>
             <section id="why-us" className="why-us section">
                 <Container>
-                    <div className="section-title" data-aos="fade-up">
-                        <h2>Why Us</h2>
-                        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-                    </div>
+                <SectionTitle heading='Why Us' subText='Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit' dataAos="fade-up" />
                     <Row className="g-4" lg={3} md={2} xs={1} data-aos="fade-up" data-aos-delay="200">
                         {
-                            whyBox.map(e => (
-                                <Col>
+                            whyBox.map((e,index) => (
+                                <Col key={index}>
                                     <div className="feature-card">
                                         <div className="icon-wrapper">
                                             <Icons iconName={e.icon} />
                                         </div>
                                         <h4>{e.title}</h4>
                                         <p>{e.description}</p>
-                                        <div className="feature-stats">
-                                            <span className="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="95" data-purecounter-duration="2">{e.statNumber}</span>
-                                            <span className="stat-label">{e.statLabel}</span>
+                                        <div className="feature-stats stats-card">
+                                            <Stats number={e.statNumber} label={e.statLabel} />
                                         </div>
                                     </div>
                                 </Col>
                             ))
                         }
                     </Row>
-                    <Row className="mt-5" lg={2}  xs={1}>
+                    <Row className="mt-5" lg={2} xs={1}>
                         <Col data-aos="fade-right" data-aos-delay="200">
                             <div className="feature-showcase">
                                 <img src={imgSRC} alt="Creative Process" className="img-fluid" />
@@ -85,10 +83,10 @@ const WhyUs = () => {
 
                                 <div className="feature-list">
                                     {
-                                        featureItems.map(e => (
-                                            <div className="feature-item">
+                                        featureItems.map((e,index) => (
+                                            <div className="feature-item" key={index}>
                                                 <div className="feature-icon">
-                                                    <Icons iconName={e.icon}/>
+                                                    <Icons iconName={e.icon} />
                                                 </div>
                                                 <div className="feature-text">
                                                     <h5>{e.title}</h5>
