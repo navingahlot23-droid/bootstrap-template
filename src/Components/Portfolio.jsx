@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import images from "../utils/importImages";
 import SectionTitle from "../Global/SectionTitle";
+import CTABanner from "../Global/CTABanner";
 
 
 const Portfolio = () => {
@@ -88,14 +89,7 @@ const Portfolio = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="portfolio-cta text-center" data-aos="fade-up" data-aos-delay="400">
-                        <h4>Ready to start your next project?</h4>
-                        <p>Let's work together to bring your digital vision to life</p>
-                        <div className="cta-buttons">
-                            <a href="#contact" className="btn btn-primary">Start a Project</a>
-                            <a href="#portfolio" className="btn btn-outline">View All Work</a>
-                        </div>
-                    </div>
+                    <CTABanner heading = "Ready to start your next project?" text = "Let's work together to bring your digital vision to life" btnPrimaryText= "Start a Project" btnPrimaryHref= "#contact" btnSecondaryText= "View All Work" btnSecondaryHref= "#portfolio" dataAos= "fade-up" data-aos-delay="400"/>
                 </Container>
             </section>
         </>

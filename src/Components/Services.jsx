@@ -1,6 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Icons from "../Global/icons";
 import SectionTitle from "../Global/SectionTitle";
+import CTABanner from "../Global/CTABanner";
 
 const Service = () => {
     const serviceBox = [
@@ -48,11 +49,6 @@ const Service = () => {
         }
     ];
 
-    const CTA = {
-        CTATitle : 'Ready to Transform Your Digital Presence?',
-        CTAText : 'Let"s discuss your project and create something amazing together',
-        CTABtnName : 'Get Started Today'
-    };
 
     return (
         <>
@@ -80,12 +76,8 @@ const Service = () => {
                         }
                     </Row>
                     <Row className="mt-5" xs={1}>
-                        <Col className="text-center " data-aos="fade-up" data-aos-delay="400">
-                            <div className="services-cta">
-                                <h3>{CTA.CTATitle}</h3>
-                                <p>{CTA.CTAText}</p>
-                                <a href="#" className="btn btn-primary">{CTA.CTABtnName}</a>
-                            </div>
+                        <Col>
+                            <CTABanner heading = "Ready to Transform Your Digital Presence?" text = "Let's discuss your project and create something amazing together" btnPrimaryText= "Get Started Today" btnPrimaryHref= "#" dataAos= "fade-up" data-aos-delay="400"/>
                         </Col>
                     </Row>
                 </Container>

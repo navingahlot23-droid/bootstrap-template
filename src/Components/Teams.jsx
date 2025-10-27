@@ -9,6 +9,7 @@ import imgSRC3 from "../assets/person-f-8.webp";
 import imgSRC4 from "../assets/person-f-3.webp";
 import Stats from "../Global/Stats";
 import SectionTitle from "../Global/SectionTitle";
+import CTABanner from "../Global/CTABanner";
 
 
 const Teams = () => {
@@ -124,7 +125,7 @@ const Teams = () => {
         <>
             <section id="team" className="team section">
                 <Container>
-                <SectionTitle heading='Team' subText='Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit' dataAos="fade-up" />
+                    <SectionTitle heading='Team' subText='Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit' dataAos="fade-up" />
                     <div data-aos="fade-up" data-aos-delay="100">
                         <Row className="g-4" lg={2} xs={1}>
                             <Col>
@@ -233,19 +234,7 @@ const Teams = () => {
                         </Row>
                         <Row className="mt-4">
                             <Col lg={{ span: 8, offset: 2 }}>
-                                <div className="join-team-cta aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
-                                    <div className="cta-icon">
-                                        <i className="bi bi-rocket-takeoff"></i>
-                                    </div>
-                                    <div className="cta-content">
-                                        <h4>Ready to Join Our Mission?</h4>
-                                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</p>
-                                        <div className="cta-actions">
-                                            <a href="#" className="btn btn-primary">View Open Roles</a>
-                                            <a href="#" className="btn btn-outline">Learn Our Culture</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <CTABanner classname = "join-team-cta cta-wrap text-center" icon='rocket-takeoff' heading="Ready to Join Our Mission?" text="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores." btnPrimaryText="View Open Roles" btnPrimaryHref="#" btnSecondaryText="Learn Our Culture" btnSecondaryHref="#" dataAos="fade-up" data-aos-delay="300" />
                             </Col>
                         </Row>
                     </div>
