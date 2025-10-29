@@ -2,6 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import imgSRC from "../assets/banner.jpg";
 import React, { useEffect } from "react";
 import Stats from "../Global/Stats";
+import { Link } from "react-router-dom";
 
 
 const Hero = () => {
@@ -30,7 +31,7 @@ const Hero = () => {
                             <h1 className="hero-title">Transform Your Digital Presence</h1>
                             <p className="hero-text">We create innovative digital solutions that drive growth and elevate your brand. From web development to digital marketing, we're your partners in digital transformation.</p>
                             <div className="hero-buttons">
-                                <a href="#" className="btn btn-primary">Get Started</a>
+                                <Link to="/contact" className="btn btn-primary">Get Started</Link>
                                 <a href="#" className="btn btn-outline">Our Work</a>
                             </div>
                             <div className="stats-card">

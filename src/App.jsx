@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -16,6 +17,7 @@ import WhyUs from "./Components/WhyUs";
 import Testimonials from "./Components/Testimonials";
 import Teams from "./Components/Teams";
 import Contact from "./Components/Contact";
+import PageNotFound from "./Components/PageNotFount";
 import Footer from "./Components/Footer";
 
 function App() {
@@ -45,16 +47,19 @@ function App() {
   return (
     <>
       <Header />
-      <Hero />
-      <About />
-      <Service />
-      <Portfolio />
-      <WhyUs />
-      <Testimonials/>
-      <Teams/>
-      <Contact/>
-      <Footer/>
+      <Routes>
+        <Route index element={<Hero/>} />
+        <Route path="/home" element={<Hero/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/services" element={<Service/>} />
+        <Route path="/portfolio" element={<Portfolio/>} />
+        <Route path="/team" element={<Teams/>} />
+        <Route path="/contact" element={<Contact/>} />
+        <Route path="*" element={<PageNotFound/>} />
+      </Routes>
+      <Footer />
     </>
+
   )
 }
 

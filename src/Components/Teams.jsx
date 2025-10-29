@@ -16,7 +16,8 @@ const Teams = () => {
     const statArray = [
         {
             number: 50,
-            label: '+ Team Members'
+            label: 'Team Members',
+            postText : '+'
         },
         {
             number: 8,
@@ -24,7 +25,8 @@ const Teams = () => {
         },
         {
             number: 15,
-            label: '+ Countries'
+            label: 'Countries',
+            postText : '+'
         }
     ];
 
@@ -136,7 +138,7 @@ const Teams = () => {
                                         <div className="stats-card">
                                             {
                                                 statArray.map((e, index) => (
-                                                    <Stats key={index} number={e.number} label={e.label} />
+                                                    <Stats key={index} number={e.number} label={e.label}  postText={e.postText}/>
                                                 ))
                                             }
                                         </div>

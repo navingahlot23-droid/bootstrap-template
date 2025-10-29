@@ -1,43 +1,42 @@
-import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  
+ 
   const navLink = [
     {
       linkName: "Home",
-      hrefVal: "#hero",
+      hrefVal: "/home",
     },
     {
       linkName: "About",
-      hrefVal: "#about",
+      hrefVal: "/about",
     },
     {
       linkName: "Services",
-      hrefVal: "#services",
+      hrefVal: "/services",
     },
     {
      linkName: "Portfolio",
-      hrefVal: "#portfolio",
+      hrefVal: "/portfolio",
     },
     {
       linkName: "Team",
-      hrefVal: "#team",
+      hrefVal: "/team",
     },
     {
       linkName: "Contact",
-      hrefVal: "#contact",
+      hrefVal: "/contact",
     }
   ];
 
   const dropdownLink = [
     {
       dropdownLink: "Action",
-      dropdownHref: "#action/3.1",
+      dropdownHref: "/action",
     },
     {
          dropdownLink: "Another action",
@@ -63,8 +62,8 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto my-2 my-lg-auto">
-              {navLink.map((e,index) => (
-                <Nav.Link key={index} href={e.hrefVal} className={activeIndex === index ? "active" : ""} onClick={() => {setActiveIndex(index);}}>{e.linkName}</Nav.Link>
+              {navLink.map((e, index) => (
+                <NavLink key = {index} to={e.hrefVal} className={({isActive}) => isActive ? "active  nav-link" : "nav-link"}>{e.linkName}</NavLink>
               ))}
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 {

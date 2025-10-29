@@ -6,15 +6,18 @@ const Contact = () => {
     const statArray = [
         {
             number: 24,
-            label: 'Hours Average Response'
+            label: 'Average Response',
+            postText : 'h'
         },
         {
             number: 98,
-            label: '% Client Satisfaction'
+            label: 'Client Satisfaction',
+            postText : '%'
         },
         {
             number: 150,
-            label: '+ Projects Delivered'
+            label: 'Projects Delivered',
+            postText : '+'
         }
     ];
     return (
@@ -110,7 +113,7 @@ const Contact = () => {
                                     <div className="info-stats stats-card">
                                         {
                                             statArray.map((e, index) => (
-                                                <Stats key={index} number={e.number} label={e.label} />
+                                                <Stats key={index} number={e.number} label={e.label} postText={e.postText}/>
                                             ))
                                         }
                                     </div>
