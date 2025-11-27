@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function PageNotFound() {
     return (
         <>
-            <div className="text-center">
+            <div className="text-center my-5 ">
                 <SectionTitle heading='404' subText='Page Not Found' />
                 <Link to="/home" className="btn btn-primary">Go to Homepage</Link>
             </div>

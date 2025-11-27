@@ -17,7 +17,7 @@ import WhyUs from "./Components/WhyUs";
 import Testimonials from "./Components/Testimonials";
 import Teams from "./Components/Teams";
 import Contact from "./Components/Contact";
-import PageNotFound from "./Components/PageNotFount";
+import PageNotFound from "./Components/PageNotFound";
 import Footer from "./Components/Footer";
 
 function App() {
