@@ -1,4 +1,4 @@
-import Icons from "./icons";
+import Icons from "./Icons";
 
 function CTABanner({classname, icon, heading, text, btnPrimaryText, btnSecondaryText, btnPrimaryHref, btnSecondaryHref, dataAos }) {
     return (

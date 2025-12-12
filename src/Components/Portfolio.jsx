@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Col, Container, Row} from "react-bootstrap";
 import images from "../utils/importImages";
-import Icons from "../Global/icons";
+import Icons from "../Global/Icons";
 import imgSRC from "../assets/why-us.png";
 import Stats from "../Global/Stats";
 import SectionTitle from "../Global/SectionTitle";

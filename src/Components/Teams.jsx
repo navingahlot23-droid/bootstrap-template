@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import Icons from "../Global/icons";
+import Icons from "../Global/Icons";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css/pagination';
