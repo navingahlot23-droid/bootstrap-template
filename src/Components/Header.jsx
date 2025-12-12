@@ -33,24 +33,6 @@ const Header = () => {
     }
   ];
 
-  const dropdownLink = [
-    {
-      dropdownLink: "Action",
-      dropdownHref: "/action",
-    },
-    {
-         dropdownLink: "Another action",
-        dropdownHref: "#action/3.2",
-      },
-      {
-        dropdownLink: "Something",
-        dropdownHref: "#action/3.3",
-      },
-      {
-         dropdownLink: "Separated link",
-        dropdownHref: "#action/3.4",
-      }
-  ];
 
   return (
     <Navbar expand="lg"  className="d-flex justify-content-between align-items-center" id="header">
@@ -65,13 +47,6 @@ const Header = () => {
               {navLink.map((e, index) => (
                 <NavLink key = {index} to={e.hrefVal} className={({isActive}) => isActive ? "active  nav-link" : "nav-link"}>{e.linkName}</NavLink>
               ))}
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                {
-                    dropdownLink.map((e,index )=> (
-                        <NavDropdown.Item key={index} href={e.dropdownHref}>{e.dropdownLink}</NavDropdown.Item>
-                    ))
-                }
-              </NavDropdown>
             </Nav>
           </Navbar.Collapse>
         </div>

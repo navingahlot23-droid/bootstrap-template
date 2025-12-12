@@ -13,8 +13,6 @@ import About from './Components/About';
 import Service from "./Components/Services";
 import Header from "./Components/Header";
 import Portfolio from "./Components/Portfolio";
-import WhyUs from "./Components/WhyUs";
-import Testimonials from "./Components/Testimonials";
 import Teams from "./Components/Teams";
 import Contact from "./Components/Contact";
 import PageNotFound from "./Components/PageNotFound";
