@@ -2,7 +2,7 @@ name: Vite React CI/CD
 
 on:
   push:
-    branches: ["main"]
+    branches: ["master"]
 
 permissions:
   contents: write
