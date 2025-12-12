@@ -47,12 +47,12 @@ function App() {
       <Header />
       <Routes>
         <Route index element={<Hero/>} />
-        <Route path="/home" element={<Hero/>} />
-        <Route path="/about" element={<About/>} />
-        <Route path="/services" element={<Service/>} />
-        <Route path="/portfolio" element={<Portfolio/>} />
-        <Route path="/team" element={<Teams/>} />
-        <Route path="/contact" element={<Contact/>} />
+        <Route path="/bootstrap-template/home" element={<Hero/>} />
+        <Route path="/bootstrap-template/about" element={<About/>} />
+        <Route path="/bootstrap-template/services" element={<Service/>} />
+        <Route path="/bootstrap-template/portfolio" element={<Portfolio/>} />
+        <Route path="/bootstrap-template/team" element={<Teams/>} />
+        <Route path="/bootstrap-template/contact" element={<Contact/>} />
         <Route path="*" element={<PageNotFound/>} />
       </Routes>
       <Footer />

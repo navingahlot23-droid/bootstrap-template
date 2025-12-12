@@ -8,27 +8,27 @@ const Header = () => {
   const navLink = [
     {
       linkName: "Home",
-      hrefVal: "/home",
+      hrefVal: "/bootstrap-template/home",
     },
     {
       linkName: "About",
-      hrefVal: "/about",
+      hrefVal: "/bootstrap-template/about",
     },
     {
       linkName: "Services",
-      hrefVal: "/services",
+      hrefVal: "/bootstrap-template/services",
     },
     {
      linkName: "Portfolio",
-      hrefVal: "/portfolio",
+      hrefVal: "/bootstrap-template/portfolio",
     },
     {
       linkName: "Team",
-      hrefVal: "/team",
+      hrefVal: "/bootstrap-template/team",
     },
     {
       linkName: "Contact",
-      hrefVal: "/contact",
+      hrefVal: "/bootstrap-template/contact",
     }
   ];
 
@@ -36,7 +36,7 @@ const Header = () => {
   return (
     <Navbar expand="lg"  className="d-flex justify-content-between align-items-center" id="header">
       <Container className="container-fluid container-xl header-container">
-        <Navbar.Brand href="#home" className="logo d-flex align-items-center me-auto me-lg-0">
+        <Navbar.Brand href="/bootstrap-template/home" className="logo d-flex align-items-center me-auto me-lg-0">
           Clarity
         </Navbar.Brand>
         <div className="link-wrap"> 
