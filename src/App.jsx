@@ -47,7 +47,7 @@ function App() {
       <Header />
       <Routes>
         <Route index element={<Hero/>} />
-        <Route path="/bootstrap-template/home" element={<Hero/>} />
+        <Route path="/bootstrap-template/" element={<Hero/>} />
         <Route path="/bootstrap-template/about" element={<About/>} />
         <Route path="/bootstrap-template/services" element={<Service/>} />
         <Route path="/bootstrap-template/portfolio" element={<Portfolio/>} />
